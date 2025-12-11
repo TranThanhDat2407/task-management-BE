@@ -14,9 +14,9 @@ CREATE TABLE boards (
 
     created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    created_by UUID NOT NULL REFERENCES users(id),
-    updated_by UUID REFERENCES users(id)
-);
+    created_by UUID NOT NULL REFERENCES users(id) ON DELETE RESTRICT,
+    updated_by UUID REFERENCES users(id) ON DELETE SET NULL
+)
 
 -- Index created_by to quick query board by 1 user (owner)
 CREATE INDEX idx_boards_creator ON boards (created_by);
