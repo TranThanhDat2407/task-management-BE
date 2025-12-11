@@ -1,4 +1,4 @@
--- V1.0.5: INSERT DATA ROLE_PERMISSIONS
+-- V1.0.4: INSERT DATA ROLE_PERMISSIONS
 
 -- ADMIN
 INSERT INTO role_permissions (role_id, permission_id)

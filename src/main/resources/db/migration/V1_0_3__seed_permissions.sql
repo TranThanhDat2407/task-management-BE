@@ -1,4 +1,4 @@
--- V1.0.4: INSERT VALUE FOR PERMISSIONS
+-- V1.0.3: INSERT VALUE FOR PERMISSIONS
 
 -- Resource:Scope:Action
 -- Resource: The Entity (:user, role, project, list, task, comment)
