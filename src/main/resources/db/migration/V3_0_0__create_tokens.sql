@@ -9,7 +9,7 @@ CREATE TABLE tokens (
 
     expiry_date TIMESTAMP WITHOUT TIME ZONE NOT NULL,
 
-    is_revoked BOOLEAN DEFAULT FALSE, -- Cờ để thu hồi token thủ công
+    is_revoked BOOLEAN DEFAULT FALSE,
 
     created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
