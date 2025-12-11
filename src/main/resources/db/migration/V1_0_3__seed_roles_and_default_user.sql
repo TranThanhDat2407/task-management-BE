@@ -3,7 +3,6 @@
 -- 1. INSERT VALUE roles
 INSERT INTO roles (name, description) VALUES
 ('ADMIN', 'System Admin'),
-('MANAGER', 'Project Manager'),
 ('USER', 'Application User');
 
 -- 2. INSERT VALUE Users (Admin)
