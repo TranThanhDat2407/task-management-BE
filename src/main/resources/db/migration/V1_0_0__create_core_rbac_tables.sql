@@ -4,7 +4,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 -- 2. CREATE ROLES TABLE
 CREATE TABLE roles (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL  PRIMARY KEY,
     name VARCHAR(50) UNIQUE NOT NULL,
     description TEXT
 );
@@ -15,11 +15,11 @@ CREATE TABLE users (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
 
         email VARCHAR(100) UNIQUE NOT NULL,
-        username VARCHAR(50) UNIQUE NOT NULL,
-        password VARCHAR(255) NOT NULL,
+        username VARCHAR(100),
+        password VARCHAR(255),
 
         --(FK)
-        role_id INTEGER NOT NULL REFERENCES roles(id) ON DELETE RESTRICT,
+        role_id BIGINT NOT NULL REFERENCES roles(id) ON DELETE RESTRICT,
 
         is_active BOOLEAN DEFAULT TRUE,
         last_login TIMESTAMP WITHOUT TIME ZONE,

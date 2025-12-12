@@ -11,6 +11,13 @@ spring:
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true       # debug
+    properties:
+      hibernate.format_sql: true
+
   flyway:
     enabled: true                                      # Bật Flyway
     baseline-on-migrate: true                          # Tùy chọn: Đặt mốc cơ sở nếu schema đã tồn tại
@@ -18,3 +25,7 @@ spring:
     schemas: public                                    # Schema Flyway sẽ quản lý
     check-location: true
     validate-on-migrate: true
+
+
+api:
+  prefix: /api/v1
