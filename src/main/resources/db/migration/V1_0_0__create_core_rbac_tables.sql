@@ -18,6 +18,8 @@ CREATE TABLE users (
         username VARCHAR(100),
         password VARCHAR(255),
 
+        provider VARCHAR(50) NOT NULL DEFAULT 'LOCAL',
+
         --(FK)
         role_id BIGINT NOT NULL REFERENCES roles(id) ON DELETE RESTRICT,
 

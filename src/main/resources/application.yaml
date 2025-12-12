@@ -27,5 +27,13 @@ spring:
     validate-on-migrate: true
 
 
+jwt:
+  secretKey: ${SECRET_KEY}
+  #  access-token-expiration: 10 # test 10s
+  access-token-expiration:  ${ACCESS_TOKEN_EXP}
+
+  #  refresh-token-expiration: 10 # test 10s
+  refresh-token-expiration: ${REFRESH_TOKEN_EXP}
+
 api:
   prefix: /api/v1

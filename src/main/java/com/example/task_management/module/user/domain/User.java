@@ -2,6 +2,7 @@ package com.example.task_management.module.user.domain;
 
 
 import com.example.task_management.common.base.time.UuidTimeAuditEntity;
+import com.example.task_management.module.user.enums.AuthProvider;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,6 +31,10 @@ public class User extends UuidTimeAuditEntity {
     @ManyToOne
     @JoinColumn(name = "role_id")
     private Role role;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "provider", nullable = false)
+    private AuthProvider provider;
 
     @Column(name = "is_active")
     private Boolean isActive;
